@@ -1,0 +1,59 @@
+.header {
+  @include tablet {
+    // @include flexCenter(column, space-between, center);
+  }
+  text-align: center;
+  width: 100%;
+  height: auto;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  overflow: hidden;
+  .pokemon {
+    width: 87vw;
+    transition: transform 0.7s ease-in-out;
+
+    &:hover {
+      transform: rotate(10deg);
+    }
+  }
+  input {
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    border-radius: 50px;
+    color: #333;
+    background: #fff;
+    margin-bottom: 50px;
+    box-shadow: 0 3px 20px 0 #0000003b;
+    text-align: center;
+  }
+}
+.section {
+  @include tablet {
+    display: none;
+  }
+
+  @include flexCenter(row, space-between, center);
+
+  background-color: black;
+  padding: 10px;
+  nav {
+    ul {
+      display: flex;
+      gap: 15px;
+
+      a {
+        color: white;
+        text-transform: uppercase;
+        font-weight: bold;
+        padding: 10px;
+        border-radius: 10px;
+        &:hover {
+          background-color: #ffcc01;
+          color: black;
+        }
+      }
+    }
+  }
+}
