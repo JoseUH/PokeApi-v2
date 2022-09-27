@@ -8,18 +8,20 @@ const getPokemons = async () => {
       .then((res) => res.json())
       .then((myRes) => {
         arrayPokemons.push(myRes);
+        arrayPokemons.sort((a,b) => a.order - b.order);
         if (arrayPokemons.length === 151) {
-          pintar(arrayPokemons);
+           pintar(arrayPokemons);
         }
       });
   }
 };
 const pintar = (pokemons) => {
+  
   charactersGallery$$.innerHTML = "";
 
   for (const pokemon of pokemons) {
     //Crear
-
+  
     const divCarta$$ = document.createElement("div");
     const nombreCartas$$ = document.createElement("h2");
     const imgCartas$$ = document.createElement("img");
