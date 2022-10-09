@@ -1,29 +1,33 @@
+function display() {
 
-function display(){
+  //Creo los elementos
 
-    //Creo los elementos
+  let list = document.querySelector(".ula");
+  let input$$ = document.querySelector(".imput");
+  let li = document.createElement("li");
+  let btn = document.createElement("p");
 
-    let input$$ = document.getElementById('input')
-    let li = document.createElement('li')  
-    let btn= document.createElement("button")
+  //Darle cualidades
 
-    //Darle cualidades
+  btn.innerText = " X";
+  btn.classList.add("kit");
+  li.innerText = input$$.value;
+  li.classList.add("remove");
 
-    btn.innerText= "X"
-    btn.classList.add("kit");
-    li.innerText = input$$.value 
+  //Hijos
 
-    //Hijos 
+  list.appendChild(li);
+  list.appendChild(btn);
+  li.appendChild(btn);
 
-    list.appendChild(li) 
-    list.appendChild(btn)
-    
-    //eliminar
-    
-    btn.addEventListener("click", () => {
+  //eliminar
 
-    const selectlis = document.querySelector("li");
-    
-    selectlis[selectliss.length - 1].remove();});
-    
-}  
+  const selectlis = document.querySelectorAll(".remove");
+//   const array = [...selectlis];
+
+  btn.addEventListener("click", () => eliminar(li));
+}
+const eliminar = (elemento) => {
+  elemento.remove()
+};
+

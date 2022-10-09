@@ -86,6 +86,10 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
@@ -112,6 +116,253 @@ body {
 
 .gujero {
   width: 10px;
+}
+
+.miInput {
+  padding: 10px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contenedor {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.body {
+  background-color: #ee062b;
+  background-image: url("https://images.wikidexcdn.net/mwuploads/esssbwiki/thumb/d/d0/latest/20180818070350/Estadio_Pok%C3%A9mon_SSBU.jpg/1200px-Estadio_Pok%C3%A9mon_SSBU.jpg");
+  background-size: 100vw;
+}
+
+.OAK {
+  width: 100px;
+  height: 100px;
+}
+
+.characters-gallery {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.characters-gallery1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.characters-gallery2 {
+  margin-left: 520px;
+  margin-top: -110px;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  color: azure;
+}
+
+.divCart {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 150px;
+  margin: 15px;
+  height: 250px;
+  border: 5px solid black;
+  border-radius: 50px;
+  background-color: #ffcc01;
+  -webkit-box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+          box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+.divCart1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 150px;
+  margin: 15px;
+  height: 250px;
+  border: 5px solid black;
+  border-radius: 50px;
+  background-color: #ffcc01;
+  -webkit-box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+          box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+.imgCartas {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 80%;
+  height: 50%;
+  padding: 10px;
+}
+
+.imgCartas1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 140%;
+  height: 50%;
+  padding: 10px;
+}
+
+.nombre {
+  color: black;
+  text-align: center;
+}
+
+.ps {
+  color: white;
+}
+
+.OAK {
+  margin: 20px;
+  margin-top: 50px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: auto;
+}
+
+.bubble {
+  position: relative;
+  background: whitesmoke;
+  color: #000000;
+  font-size: 17px;
+  text-align: center;
+  width: 285px;
+  height: 100px;
+  border-radius: 17px;
+  margin-top: 50px;
+  padding: 5px;
+  text-align: center;
+  margin-right: 5px;
+}
+
+.funcionOAK {
+  margin-top: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.btn {
+  padding: 0.4em 1.2em;
+  border: none;
+  outline: none;
+  color: white;
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  -moz-user-select: none;
+   -ms-user-select: none;
+       user-select: none;
+  -webkit-user-select: none;
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
+}
+
+.btn:before {
+  content: "";
+  background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  -webkit-animation: glowing-button-85 20s linear infinite;
+          animation: glowing-button-85 20s linear infinite;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+@-webkit-keyframes glowing-button-85 {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+@keyframes glowing-button-85 {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.btn:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #222;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
 }
 
 .header {
@@ -246,13 +497,26 @@ body {
 
 .characters-gallery .divCart .imgCartas:hover {
   cursor: pointer;
-  -webkit-transform: scale(1.3);
-          transform: scale(1.3);
 }
 
 .characters-gallery .divCart .nombre {
-  color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   text-align: center;
+  background-color: black;
+  width: 150px;
+  height: 40px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  color: white;
 }
 
 .characters-gallery .divCart .caractCartas {
@@ -268,10 +532,142 @@ body {
           flex-direction: column;
   text-align: center;
   background-color: black;
-  width: 160px;
+  width: 150px;
   height: 40px;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
   color: white;
+}
+
+.flip-card {
+  background-color: transparent;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+  /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  -webkit-transition: -webkit-transform 0.8s;
+  transition: -webkit-transform 0.8s;
+  transition: transform 0.8s;
+  transition: transform 0.8s, -webkit-transform 0.8s;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  color: black;
+}
+
+/* Style the back side */
+.flip-card-back {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.grasa {
+  background-image: URL("https://64.media.tumblr.com/59a37379d87b55fa60914349e2d9a44a/tumblr_mukur6odaJ1sicqz2o1_400.gifv");
+  background-size: cover;
+}
+
+.fuegote {
+  background-image: URL("https://acegif.com/wp-content/uploads/2021/4fh5wi/animated-wallpaper-240x320px-acegif-23.gif");
+  background-size: cover;
+}
+
+.awita {
+  background-image: URL("https://cdna.artstation.com/p/assets/images/images/016/476/952/original/csilla-rodonyi-underwater-019.gif?1552322340");
+  background-size: cover;
+}
+
+.bixo {
+  background-image: URL("https://i.pinimg.com/originals/e0/57/7d/e0577d3e97c8115965b090c16f5534d2.gif");
+  background-size: cover;
+}
+
+.normal {
+  background-image: URL("https://i.gifer.com/5J46.gif");
+  background-size: cover;
+}
+
+.veneno {
+  background-image: URL("https://64.media.tumblr.com/d1ee3ea07ad8d3c463a3233dc6b18972/9bbb517ecc15cdd6-29/s540x810/49e7c8cea35d9b378d88e0a126a557e7b8afe8be.gifv");
+  background-size: cover;
+}
+
+.hada {
+  background-image: URL("https://i.pinimg.com/originals/33/84/f0/3384f0e90d77d69e4957d8d5158877fc.gif");
+  background-size: cover;
+}
+
+.tierra {
+  background-image: URL("https://thumbs.gfycat.com/TinyCharmingDungbeetle-max-1mb.gif");
+  background-size: cover;
+}
+
+.luxa {
+  background-image: URL("http://untiedgames.com/img/tilesets/gif/desert.gif");
+  background-size: cover;
+}
+
+.acido {
+  background-image: URL("https://i.pinimg.com/originals/81/0d/7f/810d7f716a950a63a9c0dba6aacb1a73.gif");
+  background-size: cover;
+}
+
+.electrico {
+  background-image: URL("https://i.pinimg.com/originals/4a/44/cc/4a44cccd576fec851302e249b0984028.gif");
+  background-size: contain;
+}
+
+.helado {
+  background-image: URL("https://i.gifer.com/yNs.gif");
+  background-size: cover;
+}
+
+.pedrolo {
+  background-image: URL("http://img2.reactor.cc/pics/post/AnasAbdin-artist-Pixel-Gif-Pixel-Art-5745967.gif");
+  background-size: cover;
+}
+
+.dragon {
+  background-image: URL("https://c.tenor.com/Zupcd-jWrf4AAAAC/sky-purple.gif");
+  background-size: cover;
+}
+
+.casper {
+  background-image: URL("https://media.giphy.com/media/xTiTniuHdUjpOlNo1q/giphy.gif");
+  background-size: cover;
 }
 /*# sourceMappingURL=main.css.map */
