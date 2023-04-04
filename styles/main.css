@@ -543,10 +543,8 @@ body {
   background-color: transparent;
   -webkit-perspective: 1000px;
           perspective: 1000px;
-  /* Remove this if you don't want the 3D effect */
 }
 
-/* This container is needed to position the front and back side */
 .flip-card-inner {
   position: relative;
   width: 100%;
@@ -560,14 +558,13 @@ body {
           transform-style: preserve-3d;
 }
 
-/* Do an horizontal flip when you move the mouse over the flip box container */
 .flip-card:hover .flip-card-inner {
   -webkit-transform: rotateY(180deg);
           transform: rotateY(180deg);
 }
 
-/* Position the front and back side */
-.flip-card-front, .flip-card-back {
+.flip-card-front,
+.flip-card-back {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -576,7 +573,6 @@ body {
   backface-visibility: hidden;
 }
 
-/* Style the front side (fallback if image is missing) */
 .flip-card-front {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -590,28 +586,27 @@ body {
   color: black;
 }
 
-/* Style the back side */
 .flip-card-back {
   -webkit-transform: rotateY(180deg);
           transform: rotateY(180deg);
 }
 
-.grasa {
+.hierba {
   background-image: URL("https://64.media.tumblr.com/59a37379d87b55fa60914349e2d9a44a/tumblr_mukur6odaJ1sicqz2o1_400.gifv");
   background-size: cover;
 }
 
-.fuegote {
+.fuego {
   background-image: URL("https://acegif.com/wp-content/uploads/2021/4fh5wi/animated-wallpaper-240x320px-acegif-23.gif");
   background-size: cover;
 }
 
-.awita {
+.agua {
   background-image: URL("https://cdna.artstation.com/p/assets/images/images/016/476/952/original/csilla-rodonyi-underwater-019.gif?1552322340");
   background-size: cover;
 }
 
-.bixo {
+.bicho {
   background-image: URL("https://i.pinimg.com/originals/e0/57/7d/e0577d3e97c8115965b090c16f5534d2.gif");
   background-size: cover;
 }
@@ -636,12 +631,12 @@ body {
   background-size: cover;
 }
 
-.luxa {
+.lucha {
   background-image: URL("http://untiedgames.com/img/tilesets/gif/desert.gif");
   background-size: cover;
 }
 
-.acido {
+.psiquico {
   background-image: URL("https://i.pinimg.com/originals/81/0d/7f/810d7f716a950a63a9c0dba6aacb1a73.gif");
   background-size: cover;
 }
@@ -651,12 +646,12 @@ body {
   background-size: contain;
 }
 
-.helado {
+.hielo {
   background-image: URL("https://i.gifer.com/yNs.gif");
   background-size: cover;
 }
 
-.pedrolo {
+.roca {
   background-image: URL("http://img2.reactor.cc/pics/post/AnasAbdin-artist-Pixel-Gif-Pixel-Art-5745967.gif");
   background-size: cover;
 }
@@ -666,7 +661,7 @@ body {
   background-size: cover;
 }
 
-.casper {
+.fantasma {
   background-image: URL("https://media.giphy.com/media/xTiTniuHdUjpOlNo1q/giphy.gif");
   background-size: cover;
 }

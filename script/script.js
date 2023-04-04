@@ -1,5 +1,7 @@
 const charactersGallery$$ = document.querySelector(".characters-gallery");
-
+charactersGallery$$.innerHTML =` 
+//     // <h4 >Un segundo, estamos capturando los pokemons</h2>
+//     // <img class="imgCartas" src="https://i.gifer.com/MfJw.gif" alt="loading">`
 // const miInput$$ = document.querySelector(".miInput");
 // let arrayPokemons = [];
 
@@ -20,7 +22,7 @@ const charactersGallery$$ = document.querySelector(".characters-gallery");
 //         }
 //       });
 //   }
-  
+
 // };
 
 // const pintar = (pokemons) => {
@@ -84,146 +86,137 @@ const charactersGallery$$ = document.querySelector(".characters-gallery");
 
 // miInput$$.addEventListener("keyup", () => filtrar());
 
-
-
-
 const getPokemons = async () => {
-
-  const pokemons= []
+  const pokemons = [];
   for (let i = 1; i < 152; i++) {
-
-  const pokemonsResponse = await fetch(`https://pokeapi.co/api/v2/pokemon/${i}`);
-  const pokemonsJson = await pokemonsResponse.json();
-  pokemons.push(pokemonsJson);
-  
+    const pokemonsResponse = await fetch(
+      `https://pokeapi.co/api/v2/pokemon/${i}`
+    );
+    const pokemonsJson = await pokemonsResponse.json();
+    pokemons.push(pokemonsJson);
   }
   return pokemons;
-}
-
-
-const pintar = (pokemons) => {
-
-  charactersGallery$$.innerHTML = "";
-
-  for (const pokemon of pokemons) {
-
-    const divCarta$$ = document.createElement("div");
-  
-    divCarta$$.classList.add("divCart");
-    divCarta$$.classList.add("flip-card");
-
-    
-    divCarta$$.setAttribute("data-aos", "fade-up");
-
-    charactersGallery$$.appendChild(divCarta$$);
-    if (pokemon.type == 'grass') {
-      divCarta$$.classList.add('grasa');
-    }
-    if (pokemon.type == 'fire') {
-      divCarta$$.classList.add('fuegote');
-    }
-    if (pokemon.type == 'water') {
-      divCarta$$.classList.add('awita');
-    }
-    if (pokemon.type == 'bug') {
-      divCarta$$.classList.add('bixo');
-    }
-    if (pokemon.type == 'normal') {
-      divCarta$$.classList.add('normal');
-    }
-    if (pokemon.type == 'poison') {
-      divCarta$$.classList.add('veneno');
-    }
-    if (pokemon.type == 'electric') {
-      divCarta$$.classList.add('electrico');
-    }
-    if (pokemon.type == 'ground') {
-      divCarta$$.classList.add('tierra');
-    }
-    if (pokemon.type == 'fairy') {
-      divCarta$$.classList.add('hada');
-    }
-    if (pokemon.type == 'fighting') {
-      divCarta$$.classList.add('luxa');
-    }
-    if (pokemon.type == 'psychic') {
-      divCarta$$.classList.add('acido');
-    }
-    if (pokemon.type == 'rock') {
-      divCarta$$.classList.add('pedrolo');
-    }
-    if (pokemon.type == 'ghost') {
-      divCarta$$.classList.add('casper');
-    }
-    if (pokemon.type == 'ice') {
-      divCarta$$.classList.add('helado');
-    }
-    if (pokemon.type == 'dragon') {
-      divCarta$$.classList.add('dragon');
-    }
-    divCarta$$.innerHTML = `
-    <div class="flip-card-inner">
-    <div class="flip-card-front">
-    <img class="imgCartas" src="${pokemon.image}" alt="${pokemon.name}">
-    <h2 class="nombre">${pokemon.name}</h2>
-    
-    </div>
-    <div class="flip-card-back">
-    <p class="caractCartas">${pokemon.id}</p>
-    <img class="imgCartas" src="${pokemon.img}" alt="${pokemon.name}">
-
-     
-    </div>
-  </div>
-    
-   
-    `;
-  }
 };
 
+const pintar = (pokemons) => {
+  const types = {
+    fire: "fuego",
+    water: "agua",
+    bug: "bicho",
+    normal: "normal",
+    poison: "veneno",
+    electric: "electrico",
+    ground: "tierra",
+    fairy: "hada",
+    fighting: "lucha",
+    psychic: "psiquico",
+    rock: "roca",
+    ghost: "fantasma",
+    ice: "hielo",
+    dragon: "dragon",
+    grass: "hierba",
+  };
+
+  charactersGallery$$.innerHTML = "";
+  
+    for (const pokemon of pokemons) {
+
+      const divCarta$$ = document.createElement("div");
+      divCarta$$.classList.add("divCart");
+      divCarta$$.classList.add("flip-card");
+      divCarta$$.setAttribute("data-aos", "fade-up");
+  
+      charactersGallery$$.appendChild(divCarta$$);
+  
+      if (types[pokemon.type]) {
+        divCarta$$.classList.add(types[pokemon.type]);
+      }
+      // pokemon.type == "grass"
+      //   ? divCarta$$.classList.add("grasa")
+      //   : pokemon.type == "fire"
+      //   ? divCarta$$.classList.add("fuegote")
+      //   : pokemon.type == "water"
+      //   ? divCarta$$.classList.add("awita")
+      //   : pokemon.type == "bug"
+      //   ? divCarta$$.classList.add("bixo")
+      //   : pokemon.type == "normal"
+      //   ? divCarta$$.classList.add("normal")
+      //   : pokemon.type == "poison"
+      //   ? divCarta$$.classList.add("veneno")
+      //   : pokemon.type == "electric"
+      //   ? divCarta$$.classList.add("elec")
+      //   : pokemon.type == "ground"
+      //   ? divCarta$$.classList.add("tierra")
+      //   : pokemon.type == "fairy"
+      //   ? divCarta$$.classList.add("hada")
+      //   : pokemon.type == "fighting"
+      //   ? divCarta$$.classList.add("luxa")
+      //   : pokemon.type == "psychic"
+      //   ? divCarta$$.classList.add("acido")
+      //   : pokemon.type == "rock"
+      //   ? divCarta$$.classList.add("pedrolo")
+      //   : pokemon.type == "ghost"
+      //   ? divCarta$$.classList.add("casper")
+      //   : pokemon.type == "ice"
+      //   ? divCarta$$.classList.add("helado")
+      //   : divCarta$$.classList.add("dragon");
+  
+      divCarta$$.innerHTML = `
+      <div class="flip-card-inner">
+      <div class="flip-card-front">
+      <img class="imgCartas" src="${pokemon.image}" alt="${pokemon.name}">
+      <h2 class="nombre">${pokemon.name}</h2> 
+      </div>
+      <div class="flip-card-back">
+      <p class="caractCartas">${pokemon.id}</p>
+      <img class="imgCartas" src="${pokemon.img}" alt="${pokemon.name}">  
+      </div>
+    </div>
+      `;
+    }
+  
+
+  
+};
 
 const mapPokemons = (pokemons) => {
-  const mappedPokemons = pokemons.map((pokemon) => ({
-      name: pokemon.name,
-      image: pokemon.sprites.other.dream_world.front_default,
-      img:  pokemon.sprites.versions["generation-v"]["black-white"].animated
-      .front_default,
-      type: pokemon.types[0].type.name,
 
-      id: pokemon.id
-  }))
+  const mappedPokemons = pokemons.map((pokemon) => ({
+    name: pokemon.name,
+    image: pokemon.sprites.other.dream_world.front_default,
+    img: pokemon.sprites.versions["generation-v"]["black-white"].animated
+      .front_default,
+    type: pokemon.types[0].type.name,
+    id: pokemon.id,
+  }));
 
   return mappedPokemons;
-}
+};
 
 const filtrar = (nombre, pokemons) => {
 
-     const filteredPokemons = pokemons.filter( (pokemon) => pokemon.name.toLowerCase().includes(nombre.toLowerCase())); 
+  const filteredPokemons = pokemons.filter(
+    (pokemon) =>
+      pokemon.name.toLowerCase().includes(nombre.toLowerCase()) ||
+      pokemon.type.toLowerCase().includes(nombre.toLowerCase())
+  );
 
-     pintar(filteredPokemons);
-
-  };
-
+  pintar(filteredPokemons);
+};
 
 const setListener = (pokemons) => {
   const miInput$$ = document.querySelector(".miInput");
   miInput$$.addEventListener("keyup", () => filtrar(miInput$$.value, pokemons));
-  
-}
+};
 
 const init = async () => {
 
-  const pokemons = await getPokemons();
-  // console.log(pokemons)
-
+  const pokemons = await getPokemons();  
   const mappedPokemons = mapPokemons(pokemons);
   // console.log(mappedPokemons);
-
   pintar(mappedPokemons);
-
   setListener(mappedPokemons);
   AOS.init();
-  
-}
+};
 
 init();
