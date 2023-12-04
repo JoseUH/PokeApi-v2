@@ -623,17 +623,17 @@ body {
 
 .hada {
   background-image: URL("https://i.pinimg.com/originals/33/84/f0/3384f0e90d77d69e4957d8d5158877fc.gif");
-  background-size: cover;
+  background-size: contain;
 }
 
 .tierra {
-  background-image: URL("https://thumbs.gfycat.com/TinyCharmingDungbeetle-max-1mb.gif");
+  background-image: URL("http://untiedgames.com/img/tilesets/gif/desert.gif");
   background-size: cover;
 }
 
 .lucha {
-  background-image: URL("http://untiedgames.com/img/tilesets/gif/desert.gif");
-  background-size: cover;
+  background-image: URL("https://static.vecteezy.com/system/resources/previews/007/928/815/original/sport-boxing-arena-background-free-vector.jpg");
+  background-size: 400px;
 }
 
 .psiquico {
