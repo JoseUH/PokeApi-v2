@@ -86,17 +86,29 @@ charactersGallery$$.innerHTML =`
 
 // miInput$$.addEventListener("keyup", () => filtrar());
 
-const getPokemons = async () => {
-  const pokemons = [];
-  for (let i = 1; i < 152; i++) {
-    const pokemonsResponse = await fetch(
-      `https://pokeapi.co/api/v2/pokemon/${i}`
-    );
-    const pokemonsJson = await pokemonsResponse.json();
-    pokemons.push(pokemonsJson);
-  }
-  return pokemons;
-};
+// const getPokemons = async () => {
+//   const pokemons = [];
+//   for (let i = 1; i < 152; i++) {
+//     const pokemonsResponse = await fetch(
+//       `https://pokeapi.co/api/v2/pokemon/${i}`
+//     );
+//     const pokemonsJson = await pokemonsResponse.json();
+//     pokemons.push(pokemonsJson);
+//   }
+//   return pokemons;
+// };
+const getPokemons = async() => {
+  const res = await fetch("https://pokeapi.co/api/v2/pokemon?limit=151");
+  const resPokemons = await res.json();
+  return get2(resPokemons.results)
+}
+const get2 = async (pokemon)=>{
+  const pokemonpromises = pokemon.map((pokemon)=>fetch(pokemon.url))
+  // console.log(pokemonpromises);
+  const todos = await Promise.all(pokemonpromises)
+  .then(responses => Promise.all(responses.map(response=>response.json())))
+  return todos;
+}
 
 const pintar = (pokemons) => {
   const types = {
